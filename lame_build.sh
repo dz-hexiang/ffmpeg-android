@@ -7,7 +7,7 @@ pushd lame-3.100
 make clean
 
 case $1 in
-  armeabi-v7a | armeabi-v7a-neon)
+  armeabi | armeabi-v7a | armeabi-v7a-neon)
     HOST=arm-linux
   ;;
     arm64-v8a)
@@ -16,6 +16,10 @@ case $1 in
   x86)
     HOST=i686-linux
   ;;
+ x86-64)
+    HOST= x86-64-linux
+  ;;
+
 esac
 
 ./configure \
