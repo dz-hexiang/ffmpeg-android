@@ -2,7 +2,8 @@
 
 . abi_settings.sh $1 $2 $3
 
-pushd expat-2.1.0
+#pushd expat-2.1.0
+pushd expat-2.2.6
 
 make clean
 

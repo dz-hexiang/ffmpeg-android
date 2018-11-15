@@ -10,6 +10,9 @@ case $1 in
   armeabi-v7a | armeabi-v7a-neon)
     HOST=arm-linux
   ;;
+   arm64-v8a)
+    HOST=aarch64-linux
+  ;;
   x86)
     HOST=i686-linux
   ;;
@@ -25,6 +28,7 @@ echo $CFLAGS
   --disable-asm \
   --enable-static \
   --disable-shared \
+  --disable-opencl \
   --prefix="${TOOLCHAIN_PREFIX}" \
   --disable-cli || exit 1
 

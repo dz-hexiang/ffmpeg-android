@@ -2,13 +2,16 @@
 
 . abi_settings.sh $1 $2 $3
 
-pushd lame-3.99.5
-
+#pushd lame-3.99.5
+pushd lame-3.100
 make clean
 
 case $1 in
   armeabi-v7a | armeabi-v7a-neon)
     HOST=arm-linux
+  ;;
+    arm64-v8a)
+    HOST=aarch64-linux
   ;;
   x86)
     HOST=i686-linux

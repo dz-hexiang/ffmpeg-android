@@ -8,10 +8,15 @@ case $1 in
   armeabi-v7a | armeabi-v7a-neon)
     CPU='cortex-a8'
   ;;
+    arm64-v8a)
+    CPU='armv8-a'
+  ;;
   x86)
     CPU='i686'
   ;;
 esac
+
+
 
 make clean
 
@@ -36,6 +41,7 @@ make clean
 --enable-hardcoded-tables \
 --disable-ffplay \
 --disable-ffprobe \
+--disable-opencl \
 --enable-gpl \
 --enable-yasm \
 --disable-doc \
