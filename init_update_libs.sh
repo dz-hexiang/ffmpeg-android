@@ -10,7 +10,7 @@ rm -rf expat-*
 rm -rf fribidi-*
 rm -rf lame-*
 
-wget -O- ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.34.tar.gz | tar xz
+wget -O- https://sourceforge.net/projects/libpng/files/libpng16/older-releases/1.6.21/libpng-1.6.21.tar.gz/download | tar xz
 #wget -O- http://downloads.sourceforge.net/project/expat/expat/2.1.0/expat-2.1.0.tar.gz | tar xz
 wget -O- https://sourceforge.net/projects/expat/files/expat/2.2.6/expat-2.2.6.tar.bz2/download | tar xj
 wget -O- http://ftp.lfs-matrix.net/pub/blfs/conglomeration/fribidi/fribidi-1.0.5.tar.bz2 | tar xj
