@@ -16,7 +16,7 @@ case $1 in
   x86)
     HOST=i686-linux
   ;;
-    x86_64)
+  x86_64)
     HOST=x86_64-linux
   ;;
 
@@ -29,7 +29,6 @@ echo $CFLAGS
   --sysroot="$NDK_SYSROOT" \
   --host="$HOST" \
   --enable-pic \
-  #--disable-asm \
   --enable-static \
   --disable-shared \
   --disable-opencl \
