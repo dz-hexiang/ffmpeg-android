@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SUPPORTED_ARCHITECTURES=(armeabi arm64-v8a armeabi-v7a armeabi-v7a-neon x86 x86-64)
+SUPPORTED_ARCHITECTURES=(armeabi arm64-v8a armeabi-v7a armeabi-v7a-neon x86 x86_64)
 ANDROID_NDK_ROOT_PATH=${ANDROID_NDK}
 if [[ -z "$ANDROID_NDK_ROOT_PATH" ]]; then
   echo "You need to set ANDROID_NDK environment variable, please check instructions"

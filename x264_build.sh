@@ -16,8 +16,8 @@ case $1 in
   x86)
     HOST=i686-linux
   ;;
-    x86-64)
-    HOST=x86-64-linux
+    x86_64)
+    HOST=x86_64-linux
   ;;
 
 esac

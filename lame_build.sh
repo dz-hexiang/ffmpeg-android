@@ -16,13 +16,28 @@ case $1 in
   x86)
     HOST=i686-linux
   ;;
- x86-64)
-    HOST= x86-64-linux
+ x86_64)
+    HOST=x86_64-linux
   ;;
 
 esac
 
-./configure \
+
+
+if [[ $1 == 'x86'* ]]
+then
+echo ------------x86--------------------------
+  ./configure \
+  --with-pic \
+  --with-sysroot="$NDK_SYSROOT" \
+  --host="$HOST" \
+  --enable-static \
+  --disable-shared \
+  --prefix="${TOOLCHAIN_PREFIX}" \
+  --disable-shared || exit 1
+else
+echo ------------arm--------------------------
+  ./configure \
   --with-pic \
   --with-sysroot="$NDK_SYSROOT" \
   --host="$HOST" \
@@ -31,6 +46,9 @@ esac
   --prefix="${TOOLCHAIN_PREFIX}" \
   --enable-arm-neon="$ARM_NEON" \
   --disable-shared || exit 1
+fi
+
+
 
 make -j${NUMBER_OF_CORES} install || exit 1
 

@@ -33,11 +33,10 @@ case $1 in
     NDK_CROSS_PREFIX="i686-linux-android"
     CFLAGS="$CFLAGS -march=i686 -mtune=intel -mssse3 -mfpmath=sse -m32"
   ;;
-    x86-64)
-    NDK_ABI='x86-64'
-    NDK_TOOLCHAIN_ABI='x86-64'
-    NDK_CROSS_PREFIX="x86-64-linux-android"
-    CFLAGS="$CFLAGS -msse4.2 -mpopcnt -m64 -mtune=intel"
+    x86_64)
+    NDK_ABI='x86_64'
+    NDK_TOOLCHAIN_ABI='x86_64'
+    NDK_CROSS_PREFIX="x86_64-linux-android"
     ANDROID_API_VERSION=21
   ;;
 esac
