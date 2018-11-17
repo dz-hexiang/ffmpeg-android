@@ -5,8 +5,11 @@
 pushd ffmpeg
 
 case $1 in
-  armeabi | armeabi-v7a | armeabi-v7a-neon)
-    CPU='cortex-a8'
+  armeabi)
+    CPU='armv5te'
+  ;;
+  armeabi-v7a | armeabi-v7a-neon)
+    CPU='armv7-a'
   ;;
     arm64-v8a)
     CPU='armv8-a'
